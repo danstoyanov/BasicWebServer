@@ -1,0 +1,10 @@
+is_global = true
+build_property.TargetFramework = net5.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.PublishSingleFile = 
+build_property.IncludeAllContentForSelfExtract = 
+build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
+build_property.RootNamespace = DSHttpServer.Demo
+build_property.ProjectDir = C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer.Demo\

@@ -1,0 +1,16 @@
+C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer\bin\Debug\net5.0\DSHttpServer.exe
+C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer\bin\Debug\net5.0\DSHttpServer.deps.json
+C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer\bin\Debug\net5.0\DSHttpServer.runtimeconfig.json
+C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer\bin\Debug\net5.0\DSHttpServer.runtimeconfig.dev.json
+C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer\bin\Debug\net5.0\DSHttpServer.dll
+C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer\bin\Debug\net5.0\ref\DSHttpServer.dll
+C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer\bin\Debug\net5.0\DSHttpServer.pdb
+C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer\obj\Debug\net5.0\DSHttpServer.csproj.AssemblyReference.cache
+C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer\obj\Debug\net5.0\DSHttpServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer\obj\Debug\net5.0\DSHttpServer.AssemblyInfoInputs.cache
+C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer\obj\Debug\net5.0\DSHttpServer.AssemblyInfo.cs
+C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer\obj\Debug\net5.0\DSHttpServer.csproj.CoreCompileInputs.cache
+C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer\obj\Debug\net5.0\DSHttpServer.dll
+C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer\obj\Debug\net5.0\ref\DSHttpServer.dll
+C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer\obj\Debug\net5.0\DSHttpServer.pdb
+C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer\obj\Debug\net5.0\DSHttpServer.genruntimeconfig.cache

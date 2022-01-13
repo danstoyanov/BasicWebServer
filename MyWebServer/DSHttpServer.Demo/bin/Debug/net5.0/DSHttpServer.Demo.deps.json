@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "DSHttpServer.Demo/1.0.0": {
+        "dependencies": {
+          "DSHttpServer.Server": "1.0.0"
+        },
+        "runtime": {
+          "DSHttpServer.Demo.dll": {}
+        }
+      },
+      "DSHttpServer.Server/1.0.0": {
+        "runtime": {
+          "DSHttpServer.Server.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DSHttpServer.Demo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DSHttpServer.Server/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
