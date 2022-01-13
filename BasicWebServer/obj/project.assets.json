@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dakov\\Source\\Repos\\danstoyanov\\BasicWebServer\\BasicWebServer.csproj",
+      "projectUniqueName": "C:\\Users\\dakov\\Source\\Repos\\danstoyanov\\BasicWebServer\\BasicWebServer\\BasicWebServer.csproj",
       "projectName": "BasicWebServer",
-      "projectPath": "C:\\Users\\dakov\\Source\\Repos\\danstoyanov\\BasicWebServer\\BasicWebServer.csproj",
+      "projectPath": "C:\\Users\\dakov\\Source\\Repos\\danstoyanov\\BasicWebServer\\BasicWebServer\\BasicWebServer.csproj",
       "packagesPath": "C:\\Users\\dakov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dakov\\Source\\Repos\\danstoyanov\\BasicWebServer\\obj\\",
+      "outputPath": "C:\\Users\\dakov\\Source\\Repos\\danstoyanov\\BasicWebServer\\BasicWebServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
