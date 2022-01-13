@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u6BhidqXskRRANnwgV/xVV3kVH55ZlbIJ0afGzOwh4TNtJrvO6Qu0cFvcnm+4hVmkgKOI6Bt9+4x2zLvyqo1kQ==",
+  "dgSpecHash": "V7tNt9MhlZwqazJqteoMrImYp3eXX8PA8p1qgXTiYAZqnDwdH8I4wl/hJ0QQvYFjvWkWQ2g7BHxOtZRYjGEDsA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dakov\\Desktop\\My Folder\\C# Web Basics - Jan 2022\\C# Web Basics\\01. Web Server - HTTP Protocol\\MyWebServer\\DSHttpServer.Server\\DSHttpServer.Server.csproj",
+  "projectFilePath": "C:\\Users\\dakov\\Source\\Repos\\danstoyanov\\BasicWebServer\\MyWebServer\\DSHttpServer.Server\\DSHttpServer.Server.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
