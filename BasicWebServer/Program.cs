@@ -28,9 +28,10 @@ namespace BasicWebServer
             var contentLength = Encoding.UTF8.GetByteCount(content);
 
             var response = $@"HTTP/1.1 200 OK
-                           Content-Type: text/plain; charset=UTF-8
-                           Content-Length: {contentLength}
-                                           {content}";
+Content-Type: text/plain; charset=UTF-8
+Content-Length: {contentLength}
+
+{content}";
 
             var responseBytes = Encoding.UTF8.GetBytes(response);
             networkStream.Write(responseBytes);
