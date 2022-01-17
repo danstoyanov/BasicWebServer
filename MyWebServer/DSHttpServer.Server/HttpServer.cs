@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Net;
-using System.Net.Sockets;
 using System.Text;
+using System.Net.Sockets;
+using System.Threading.Tasks;
+
+using DSHttpServer.Server.HTTP;
+using DSHttpServer.Server.HTTP.Interfaces;
 
 namespace DSHttpServer.Server
 {
@@ -11,15 +15,31 @@ namespace DSHttpServer.Server
         private readonly int port;
         private readonly TcpListener serverListener;
 
-        public HttpServer(string ipAddress, int port)
+        private readonly RoutingTable routingTable;
+
+        public HttpServer(string ipAddress, int port, Action<IRoutingTable> routingTableConfiguration)
         {
             this.ipAddress = IPAddress.Parse(ipAddress);
             this.port = port;
 
             this.serverListener = new TcpListener(this.ipAddress, port);
+
+            routingTableConfiguration(this.routingTable = new RoutingTable());
         }
 
-        public void Start()
+        public HttpServer(int port, Action<IRoutingTable> routingTable)
+            : this("127.0.0.1", port, routingTable)
+        {
+
+        }
+
+        public HttpServer(Action<IRoutingTable> routingTable)
+            : this(8080, routingTable)
+        {
+
+        }
+
+        public async Task Start()
         {
             this.serverListener.Start();
 
@@ -28,35 +48,37 @@ namespace DSHttpServer.Server
 
             while (true)
             {
-                var connection = serverListener.AcceptTcpClient();
+                var connection = await serverListener.AcceptTcpClientAsync();
 
-                var networkStream = connection.GetStream();
+                _ = Task.Run(async () =>
+                {
+                    var networkStream = connection.GetStream();
 
-                var requestText = this.ReadRequest(networkStream);
-                Console.WriteLine(requestText);
+                    var requestText = await this.ReadRequest(networkStream);
 
-                WriteResponse(networkStream, "Hello from the server !");
+                    Console.WriteLine(requestText);
 
-                connection.Close();
+                    var request = Request.Parse(requestText);
+                    var response = this.routingTable.MatchRequest(request);
+
+                    if (response.PreRenderAction != null)
+                        response.PreRenderAction(request, response);
+
+                    await WriteResponse(networkStream, response);
+
+                    connection.Close();
+                });
             }
         }
 
-        private void WriteResponse(NetworkStream networkStream, string message)
+        private async Task WriteResponse(NetworkStream networkStream, Response response)
         {
-            var contentLength = Encoding.UTF8.GetByteCount(message);
+            var responseBytes = Encoding.UTF8.GetBytes(response.ToString());
 
-            var response = $@"HTTP/1.1 200 OK
-Content-Type: text/plain; charset=UTF-8
-Content-Length: {contentLength}
-
-{message}";
-
-            var responseBytes = Encoding.UTF8.GetBytes(response);
-
-            networkStream.Write(responseBytes);
+            await networkStream.WriteAsync(responseBytes);
         }
 
-        private string ReadRequest(NetworkStream networkStream)
+        private async Task<string> ReadRequest(NetworkStream networkStream)
         {
             var bufferLength = 1024;
             var buffer = new byte[bufferLength];
@@ -67,7 +89,8 @@ Content-Length: {contentLength}
 
             do
             {
-                var bytesRead = networkStream.Read(buffer, 0, bufferLength);
+                var bytesRead = await networkStream
+                    .ReadAsync(buffer, 0, bufferLength);
 
                 totalBytes += bytesRead;
 
