@@ -17,3 +17,22 @@ C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web 
 C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer.Demo\obj\Debug\net5.0\ref\DSHttpServer.Demo.dll
 C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer.Demo\obj\Debug\net5.0\DSHttpServer.Demo.pdb
 C:\Users\dakov\Desktop\My Folder\C# Web Basics - Jan 2022\C# Web Basics\01. Web Server - HTTP Protocol\MyWebServer\DSHttpServer.Demo\obj\Debug\net5.0\DSHttpServer.Demo.genruntimeconfig.cache
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\bin\Debug\net5.0\DSHttpServer.Demo.exe
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\bin\Debug\net5.0\DSHttpServer.Demo.deps.json
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\bin\Debug\net5.0\DSHttpServer.Demo.runtimeconfig.json
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\bin\Debug\net5.0\DSHttpServer.Demo.runtimeconfig.dev.json
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\bin\Debug\net5.0\DSHttpServer.Demo.dll
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\bin\Debug\net5.0\ref\DSHttpServer.Demo.dll
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\bin\Debug\net5.0\DSHttpServer.Demo.pdb
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\bin\Debug\net5.0\DSHttpServer.Server.dll
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\bin\Debug\net5.0\DSHttpServer.Server.pdb
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\obj\Debug\net5.0\DSHttpServer.Demo.csproj.AssemblyReference.cache
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\obj\Debug\net5.0\DSHttpServer.Demo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\obj\Debug\net5.0\DSHttpServer.Demo.AssemblyInfoInputs.cache
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\obj\Debug\net5.0\DSHttpServer.Demo.AssemblyInfo.cs
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\obj\Debug\net5.0\DSHttpServer.Demo.csproj.CoreCompileInputs.cache
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\obj\Debug\net5.0\DSHttpServer.Demo.csproj.CopyComplete
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\obj\Debug\net5.0\DSHttpServer.Demo.dll
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\obj\Debug\net5.0\ref\DSHttpServer.Demo.dll
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\obj\Debug\net5.0\DSHttpServer.Demo.pdb
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\obj\Debug\net5.0\DSHttpServer.Demo.genruntimeconfig.cache
