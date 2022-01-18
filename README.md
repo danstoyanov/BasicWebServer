@@ -15,5 +15,7 @@ My Basic Web Server project from **C# Web Basics Course** in **Software Universi
 	- [x] HTTP Request Class 
 
 -[x] **Reading Request**
+
 -[x] **Prevent Too Long Request**
+
 -[x] **Add a Null-Checking Class**
