@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\MyWebServer",
-    "\\MyWebServer\\DSHttpServer",
-    "\\MyWebServer\\DSHttpServer.Demo"
+    ""
   ],
-  "SelectedNode": "\\MyWebServer\\DSHttpServer.Demo",
+  "SelectedNode": "\\DSHttpServer.sln",
   "PreviewInSolutionExplorer": false
 }
