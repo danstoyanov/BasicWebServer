@@ -6,13 +6,6 @@ My Basic Web Server project from **C# Web Basics Course** in **Software Universi
 
 ###### Tasks to create a similar web server from scratch:
 
-- [x] dadad
-- [x] dadad
-- [x] dadada
-- [x]
-- [x]
-- [x]
-- [ ]
-- [x]
-- [x]
-- [ ]
+- [x] 1
+	- [ ] 2
+- [ ] 3
