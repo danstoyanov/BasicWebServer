@@ -21,12 +21,32 @@ My Basic Web Server project from **C# Web Basics Course** in **Software Universi
 - [x] **Add a Null-Checking Class**
 
 - [x] **Implementing Specific HTTP Responses**
-	- [x] **Add specific HTTP responses**
-	- [x] **Implement routing table**
-	- [x] **Use the response class and routing**
+	- [x] **Add Specific HTTP Responses**
+	- [x] **Implement Routing Table**
+	- [x] **Use the Response Class and Routing**
 
 - [x] **Add Form Functionality**
-	- [x] **Create the form and map request**
-	- [x] **Implement form parsing in the request**
-	- [x] **Modify response resulst**
-	- [x] **Create a pre-render action and try it out**
+	- [x] **Create the Form and Map Request**
+	- [x] **Implement Form Parsing in the Request**
+	- [x] **Modify Response Resulst**
+	- [x] **Create a Pre-render Action and try It Out**
+
+- [x] **Implement Cookie Functionality**
+	- [x] Create Cookies Classes
+	- [x] Parse Cookies in the Request
+	- [x] Add Cookies to the Response
+	- [x] Modify the Startup Class
+	- [x] Examine Cookies in the Browser
+
+- [x] **Implement Session Functionality**
+	-[x] Create Session Class
+	-[x] Get the Session from the Request
+	-[x] Modify the HTTP Server
+	-[x] Examine Session in the Browser
+	-[x] Display Session Info on a Page
+
+- [x] **Implement Login + Profile + Logout**
+	- [x] Implement "GET" to "/Login"
+	- [x] Implement "POST" to "/Login
+	- [x] Implement "GET" to "/Logout"
+	- [x] Implement "GET" to "/UserProfile"
