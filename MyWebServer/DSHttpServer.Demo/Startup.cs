@@ -167,10 +167,8 @@ namespace DSHttpServer.Demo
                 foreach (var cookie in request.Cookies)
                 {
                     cookieText.Append("<tr>");
-                    cookieText
-                        .Append($"<td>{HttpUtility.HtmlEncode(cookie.Name)}</td>");
-                    cookieText
-                        .Append($"<td>{HttpUtility.HtmlEncode(cookie.Value)}</td>");
+                    cookieText.Append($"<td>{HttpUtility.HtmlEncode(cookie.Name)}</td>");
+                    cookieText.Append($"<td>{HttpUtility.HtmlEncode(cookie.Value)}</td>");
                     cookieText.Append("</tr>");
                 }
                 cookieText.Append("</table>");

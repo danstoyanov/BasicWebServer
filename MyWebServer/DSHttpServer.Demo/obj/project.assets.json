@@ -34,11 +34,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dakov\\Desktop\\My Folder\\C# Web Basics - Jan 2022\\C# Web Basics\\01. Web Server - HTTP Protocol\\MyWebServer\\DSHttpServer.Demo\\DSHttpServer.Demo.csproj",
+      "projectUniqueName": "C:\\Users\\dakov\\Source\\Repos\\danstoyanov\\BasicWebServer\\MyWebServer\\DSHttpServer.Demo\\DSHttpServer.Demo.csproj",
       "projectName": "DSHttpServer.Demo",
-      "projectPath": "C:\\Users\\dakov\\Desktop\\My Folder\\C# Web Basics - Jan 2022\\C# Web Basics\\01. Web Server - HTTP Protocol\\MyWebServer\\DSHttpServer.Demo\\DSHttpServer.Demo.csproj",
+      "projectPath": "C:\\Users\\dakov\\Source\\Repos\\danstoyanov\\BasicWebServer\\MyWebServer\\DSHttpServer.Demo\\DSHttpServer.Demo.csproj",
       "packagesPath": "C:\\Users\\dakov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dakov\\Desktop\\My Folder\\C# Web Basics - Jan 2022\\C# Web Basics\\01. Web Server - HTTP Protocol\\MyWebServer\\DSHttpServer.Demo\\obj\\",
+      "outputPath": "C:\\Users\\dakov\\Source\\Repos\\danstoyanov\\BasicWebServer\\MyWebServer\\DSHttpServer.Demo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -60,8 +60,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\dakov\\Desktop\\My Folder\\C# Web Basics - Jan 2022\\C# Web Basics\\01. Web Server - HTTP Protocol\\MyWebServer\\DSHttpServer.Server\\DSHttpServer.Server.csproj": {
-              "projectPath": "C:\\Users\\dakov\\Desktop\\My Folder\\C# Web Basics - Jan 2022\\C# Web Basics\\01. Web Server - HTTP Protocol\\MyWebServer\\DSHttpServer.Server\\DSHttpServer.Server.csproj"
+            "C:\\Users\\dakov\\Source\\Repos\\danstoyanov\\BasicWebServer\\MyWebServer\\DSHttpServer.Server\\DSHttpServer.Server.csproj": {
+              "projectPath": "C:\\Users\\dakov\\Source\\Repos\\danstoyanov\\BasicWebServer\\MyWebServer\\DSHttpServer.Server\\DSHttpServer.Server.csproj"
             }
           }
         }
