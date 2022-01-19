@@ -20,7 +20,7 @@ My Basic Web Server project from **C# Web Basics Course** in **Software Universi
 
 - [x] **Add a Null-Checking Class**
 
-- [x] **Implementing Specific HTTP Responses
+- [x] **Implementing Specific HTTP Responses**
 	- [x] Add Specific HTTP Responses
 	- [x] Implement Routing Table
 	- [x] Use the Response Class and Routing
