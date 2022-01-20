@@ -50,3 +50,17 @@ My Basic Web Server project from **C# Web Basics Course** in **Software Universi
 	- [x] Implement "POST" to "/Login
 	- [x] Implement "GET" to "/Logout"
 	- [x] Implement "GET" to "/UserProfile"
+
+- [ ] **Introduce Controllers**
+	- [ ] Modify Routing Table
+	- [ ] Create Controller Class
+	- [ ] Create Routing Extesions 
+	- [ ] Create Controller with Actions
+	- [ ] Clear Solutin
+
+- [ ] **Introduce Views**
+	-[ ] Create View Response 
+	-[ ] Modify Controller to Return View
+	-[ ] Create Views and Modify Controller Actions
+	-[ ] Modify the .cspoj File
+	-[ ] Try Controllers with Views
