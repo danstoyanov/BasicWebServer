@@ -64,3 +64,9 @@ My Basic Web Server project from **C# Web Basics Course** in **Software Universi
 	- [ ] Create Views and Modify Controller Actions
 	- [ ] Modify the .cspoj File
 	- [ ] Try Controllers with Views
+
+- [ ] **Introduce Models**
+	- [ ] Modify ViewResponse Class
+	- [ ] Create Model and View 
+	- [ ] Modify Controller Method to Return View with Model
+	- [ ] Try Controller with View and Model 
