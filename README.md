@@ -59,8 +59,8 @@ My Basic Web Server project from **C# Web Basics Course** in **Software Universi
 	- [ ] Clear Solutin
 
 - [ ] **Introduce Views**
-	-[ ] Create View Response 
-	-[ ] Modify Controller to Return View
-	-[ ] Create Views and Modify Controller Actions
-	-[ ] Modify the .cspoj File
-	-[ ] Try Controllers with Views
+	- [ ] Create View Response 
+	- [ ] Modify Controller to Return View
+	- [ ] Create Views and Modify Controller Actions
+	- [ ] Modify the .cspoj File
+	- [ ] Try Controllers with Views
