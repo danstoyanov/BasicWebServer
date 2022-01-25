@@ -186,7 +186,6 @@ namespace DSHttpServer.Demo
                 response.Cookies.Add("My-Second-Cookie", "My-Second-Value");
             }
 
-            // Here to vizualize  !!!
             response.Body = bodyText;
         }
 
