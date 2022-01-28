@@ -1,4 +1,7 @@
-﻿using DSHttpServer.Server.HTTP;
+﻿
+
+using DSHttpServer.Server.HTTP;
+using DSHttpServer.Server.Headers;
 
 namespace DSHttpServer.Server.Responses
 {

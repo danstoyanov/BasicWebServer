@@ -1,6 +1,9 @@
 ﻿using System.IO;
 
-namespace DSHttpServer.Server.HTTP
+using DSHttpServer.Server.Headers;
+using DSHttpServer.Server.HTTP;
+
+namespace DSHttpServer.Server.Responses
 {
     public class TextFileResponse : Response
     {

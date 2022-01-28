@@ -3,9 +3,10 @@ using System.Collections.Generic;
 
 using DSHttpServer.Server.Common;
 using DSHttpServer.Server.Responses;
-using DSHttpServer.Server.HTTP.Interfaces;
+using DSHttpServer.Server.HTTP;
+using DSHttpServer.Server.HTTP.RoutingTables;
 
-namespace DSHttpServer.Server.HTTP
+namespace DSHttpServer.Server.RoutingTables
 {
     public class RoutingTable : IRoutingTable
     {

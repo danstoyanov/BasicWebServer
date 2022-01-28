@@ -1,6 +1,6 @@
 ﻿using DSHttpServer.Server.Common;
 
-namespace DSHttpServer.Server.HTTP
+namespace DSHttpServer.Server.Headers
 {
     public class Header
     {

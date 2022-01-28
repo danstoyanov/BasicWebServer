@@ -1,4 +1,4 @@
-﻿namespace DSHttpServer.Server.HTTP.Interfaces
+﻿namespace DSHttpServer.Server.HTTP.RoutingTables
 {
     public interface IRoutingTable
     {

@@ -14,7 +14,6 @@ C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.
 C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Server\bin\Debug\net5.0\DSHttpServer.Server.dll
 C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Server\bin\Debug\net5.0\ref\DSHttpServer.Server.dll
 C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Server\bin\Debug\net5.0\DSHttpServer.Server.pdb
-C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Server\obj\Debug\net5.0\DSHttpServer.Server.csproj.AssemblyReference.cache
 C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Server\obj\Debug\net5.0\DSHttpServer.Server.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Server\obj\Debug\net5.0\DSHttpServer.Server.AssemblyInfoInputs.cache
 C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Server\obj\Debug\net5.0\DSHttpServer.Server.AssemblyInfo.cs

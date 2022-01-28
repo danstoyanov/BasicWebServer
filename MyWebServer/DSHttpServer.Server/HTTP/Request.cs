@@ -4,6 +4,7 @@ using System.Linq;
 using System.Collections.Generic;
 
 using DSHttpServer.Server.HTTP.Cookies;
+using DSHttpServer.Server.Headers;
 
 namespace DSHttpServer.Server.HTTP
 {

@@ -2,8 +2,10 @@
 using System.Text;
 
 using DSHttpServer.Server.Common;
+using DSHttpServer.Server.Headers;
+using DSHttpServer.Server.HTTP;
 
-namespace DSHttpServer.Server.HTTP
+namespace DSHttpServer.Server.Responses
 {
     public class ContentResponse : Response
     {

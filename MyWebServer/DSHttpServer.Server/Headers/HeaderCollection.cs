@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace DSHttpServer.Server.HTTP
+namespace DSHttpServer.Server.Headers
 {
     public class HeaderCollection : IEnumerable<Header>
     {

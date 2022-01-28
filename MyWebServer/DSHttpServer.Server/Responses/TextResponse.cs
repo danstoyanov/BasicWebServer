@@ -1,6 +1,8 @@
 ﻿using System;
 
-namespace DSHttpServer.Server.HTTP
+using DSHttpServer.Server.HTTP;
+
+namespace DSHttpServer.Server.Responses
 {
     public class TextResponse : ContentResponse
     {

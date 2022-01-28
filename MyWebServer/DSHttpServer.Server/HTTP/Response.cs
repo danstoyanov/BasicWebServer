@@ -1,6 +1,8 @@
-﻿using DSHttpServer.Server.HTTP.Cookies;
-using System;
+﻿using System;
 using System.Text;
+
+using DSHttpServer.Server.Headers;
+using DSHttpServer.Server.HTTP.Cookies;
 
 namespace DSHttpServer.Server.HTTP
 {

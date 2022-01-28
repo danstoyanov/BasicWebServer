@@ -5,7 +5,8 @@ using System.Net.Sockets;
 using System.Threading.Tasks;
 
 using DSHttpServer.Server.HTTP;
-using DSHttpServer.Server.HTTP.Interfaces;
+using DSHttpServer.Server.RoutingTables;
+using DSHttpServer.Server.HTTP.RoutingTables;
 
 namespace DSHttpServer.Server
 {
