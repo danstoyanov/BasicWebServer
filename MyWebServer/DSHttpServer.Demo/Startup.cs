@@ -52,9 +52,6 @@ namespace DSHttpServer.Demo
             .Start();
 
 
-
-
-
         private static void GetUserDataAction(Request request, Response response)
         {
             if (request.Session.ContainsKey(Session.SessionCurrentDateKey))

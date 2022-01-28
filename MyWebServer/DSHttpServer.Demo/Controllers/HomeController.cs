@@ -12,5 +12,7 @@ namespace DSHttpServer.Demo.Controllers
         }
 
         public Response Index() => Text("Hello from the server");
+
+        public Response Redirect() => Redirect("https://github.com/");
     }
 }
