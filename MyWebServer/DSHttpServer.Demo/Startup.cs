@@ -39,27 +39,20 @@ namespace DSHttpServer.Demo
         private const string Password = "user123";
 
         public static async Task Main()
-        {
-            await DownloadSitesAsTextFile(Startup.FileName,
-                new string[] { "https://judge.softuni.org/", "https://softuni.org/" });
+            => await new HttpServer(routes => routes
+                .MapGet<HomeController>("/", c => c.Index())
+                .MapGet<HomeController>("/Redirect", c => c.Redirect())
+                .MapGet<HomeController>("/HTML", c => c.Html())
+                .MapPost<HomeController>("/HTML", c => c.HtmlFormPost())
+                .MapGet<HomeController>("/Content", c => c.Content())
+                .MapPost<HomeController>("/Content", c => c.DownloadContent())
+                .MapGet<HomeController>("/Cookies", c => c.Cookies())
+                .MapGet<HomeCronroller>("/Session", c => c.Session()))
+            .Start();
 
-            var server = new HttpServer(routes => routes
-                .MapGet("/", new TextResponse("Hello from the server!"))
-                .MapGet("/Redirect", new RedirectResponse("https://softuni.org/"))
-                .MapGet("/HTML", new HtmlResponse(Startup.HtmlForm))
-                .MapPost("/HTML", new TextResponse("", Startup.AddFormDataAction))
-                .MapGet("/Content", new HtmlResponse(Startup.DownloadForm))
-                .MapPost("/Content", new TextFileResponse(Startup.FileName))
-                .MapGet("/Cookies", new HtmlResponse("", Startup.AddCookiesAction))
-                .MapGet("/Session", new TextResponse("", Startup.DisplaySessionInfoAction))
 
-                .MapGet("/Login", new HtmlResponse(Startup.LoginForm))
-                .MapPost("/Login", new HtmlResponse("", Startup.LoginAction))
-                .MapGet("/Logout", new HtmlResponse("", Startup.LogoutAction))
-                .MapGet("/UserProfile", new HtmlResponse("", Startup.GetUserDataAction)));
 
-            await server.Start();
-        }
+
 
         private static void GetUserDataAction(Request request, Response response)
         {
