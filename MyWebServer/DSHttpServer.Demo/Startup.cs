@@ -10,6 +10,7 @@ using DSHttpServer.Server.Responses;
 using System.Linq;
 using System.Text;
 using System.Web;
+using DSHttpServer.Demo.Controllers;
 
 namespace DSHttpServer.Demo
 {
@@ -47,7 +48,7 @@ namespace DSHttpServer.Demo
                 .MapGet<HomeController>("/Content", c => c.Content())
                 .MapPost<HomeController>("/Content", c => c.DownloadContent())
                 .MapGet<HomeController>("/Cookies", c => c.Cookies())
-                .MapGet<HomeCronroller>("/Session", c => c.Session()))
+                .MapGet<HomeController>("/Session", c => c.Session()))
             .Start();
 
 
@@ -59,13 +60,13 @@ namespace DSHttpServer.Demo
             if (request.Session.ContainsKey(Session.SessionCurrentDateKey))
             {
                 response.Body = "";
-                response.Body += $"<h3>Currently logged-in user " + 
+                response.Body += $"<h3>Currently logged-in user " +
                     $"is with username '{Username}'</h3>";
             }
             else
             {
                 response.Body = "";
-                response.Body += "<h3>You should first log in " + 
+                response.Body += "<h3>You should first log in " +
                     "- <a href='/Login'>Login</a></h3>";
             }
         }

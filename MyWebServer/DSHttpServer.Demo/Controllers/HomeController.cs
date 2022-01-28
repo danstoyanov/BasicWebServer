@@ -10,5 +10,7 @@ namespace DSHttpServer.Demo.Controllers
         {
 
         }
+
+        public Response Index() => Text("Hello from the server");
     }
 }
