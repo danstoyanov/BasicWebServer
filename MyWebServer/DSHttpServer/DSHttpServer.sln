@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSHttpServer.Server", "..\DSHttpServer.Server\DSHttpServer.Server.csproj", "{216E52C7-686A-419D-8B18-ABE4FBE3EA00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSHttpServer.Demo", "..\DSHttpServer.Demo\DSHttpServer.Demo.csproj", "{2E5904B2-EAAF-46D1-AE52-1C752F246055}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSHttpServer.Demo", "..\DSHttpServer.Demo\DSHttpServer.Demo.csproj", "{2E5904B2-EAAF-46D1-AE52-1C752F246055}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
