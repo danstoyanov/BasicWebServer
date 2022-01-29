@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 using DSHttpServer.Server.HTTP;
 using DSHttpServer.Server.Controllers;
@@ -7,6 +10,8 @@ namespace DSHttpServer.Demo.Controllers
 {
     public class HomeController : Controller
     {
+        private const string FileName = "content.txt";
+
         private const string DownloadForm = @"<form action='/Content' method='POST'>
                  <input type='submit' value ='Download Sites Content' /> 
         </form>";
@@ -43,5 +48,48 @@ namespace DSHttpServer.Demo.Controllers
         }
 
         public Response Content() => Html(HomeController.DownloadForm);
+
+        public Response DownloadContent()
+        {
+            DownloadSitesAsTextFile(HomeController.FileName,
+                new string[] { "https://judge.softuni.org/", "https://softuni.org/" })
+                .Wait();
+
+            return File(HomeController.FileName);
+        }
+
+        private static async Task DownloadSitesAsTextFile(
+            string fileName, string[] urls)
+        {
+            var downloads = new List<Task<string>>();
+
+            foreach (var url in urls)
+            {
+                downloads.Add(DownloadWebSiteContent(url));
+            }
+
+            var responses = await Task.WhenAll(downloads);
+
+            var responsesString = string.Join(
+                Environment.NewLine + new String('-', 100),
+                responses);
+
+            await System.IO.File.WriteAllTextAsync(fileName, responsesString);
+        }
+
+        private static async Task<string> DownloadWebSiteContent(string url)
+        {
+            var httpClient = new HttpClient();
+            using (httpClient)
+            {
+                var response = await httpClient.GetAsync(url);
+
+                var html = await response.Content.ReadAsStringAsync();
+
+                return html.Substring(0, 2000);
+            }
+        }
+
+
     }
 }

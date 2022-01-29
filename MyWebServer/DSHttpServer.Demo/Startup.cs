@@ -22,8 +22,6 @@ namespace DSHttpServer.Demo
            <input type='submit' value ='Log In' /> 
         </form>";
 
-        private const string FileName = "content.txt";
-
         private const string Username = "user";
 
         private const string Password = "user123";
@@ -35,7 +33,7 @@ namespace DSHttpServer.Demo
                 .MapGet<HomeController>("/HTML", c => c.Html())
                 .MapPost<HomeController>("/HTML", c => c.HtmlFormPost())
                 .MapGet<HomeController>("/Content", c => c.Content())
-                //.MapPost<HomeController>("/Content", c => c.DownloadContent())
+                .MapPost<HomeController>("/Content", c => c.DownloadContent())
                 //.MapGet<HomeController>("/Cookies", c => c.Cookies())
                 //.MapGet<HomeController>("/Session", c => c.Session())
                 )
@@ -96,38 +94,6 @@ namespace DSHttpServer.Demo
 
             response.Body = "";
             response.Body += bodyText;
-        }
-
-        private static async Task DownloadSitesAsTextFile(
-            string fileName, string[] urls)
-        {
-            var downloads = new List<Task<string>>();
-
-            foreach (var url in urls)
-            {
-                downloads.Add(DownloadWebSiteContent(url));
-            }
-
-            var responses = await Task.WhenAll(downloads);
-
-            var responsesString = string.Join(
-                Environment.NewLine + new String('-', 100),
-                responses);
-
-            await File.WriteAllTextAsync(fileName, responsesString);
-        }
-
-        private static async Task<string> DownloadWebSiteContent(string url)
-        {
-            var httpClient = new HttpClient();
-            using (httpClient)
-            {
-                var response = await httpClient.GetAsync(url);
-
-                var html = await response.Content.ReadAsStringAsync();
-
-                return html.Substring(0, 2000);
-            }
         }
 
         private static void AddCookiesAction(Request request, Response response)
