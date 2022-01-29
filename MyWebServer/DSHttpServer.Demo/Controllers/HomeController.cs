@@ -20,12 +20,6 @@ namespace DSHttpServer.Demo.Controllers
                  <input type='submit' value ='Download Sites Content' /> 
         </form>";
 
-        private const string HtmlForm = @"<form action='/HTML' method='POST'>
-            Name: <input type='text' name='Name'/>
-            Age: <input type='number' name ='Age'/>
-            <input type='submit' value ='Save' />
-        </form>";
-
         public HomeController(Request request)
             : base(request)
         {
@@ -36,7 +30,7 @@ namespace DSHttpServer.Demo.Controllers
 
         public Response Redirect() => Redirect("https://github.com/");
 
-        public Response Html() => Html(HomeController.HtmlForm);
+        public Response Html() => View();
 
         public Response HtmlFormPost()
         {
@@ -51,7 +45,7 @@ namespace DSHttpServer.Demo.Controllers
             return Text(formData);
         }
 
-        public Response Content() => Html(HomeController.DownloadForm);
+        public Response Content() => View();
 
         public Response DownloadContent()
         {
