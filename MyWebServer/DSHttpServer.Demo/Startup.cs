@@ -16,12 +16,6 @@ namespace DSHttpServer.Demo
 {
     public class Startup
     {
-        private const string HtmlForm = @"<form action='/HTML' method='POST'>
-            Name: <input type='text' name='Name'/>
-            Age: <input type='number' name ='Age'/>
-            <input type='submit' value ='Save' />
-        </form>";
-
         private const string DownloadForm = @"<form action='/Content' method='POST'>
                  <input type='submit' value ='Download Sites Content' /> 
         </form>";
@@ -32,7 +26,6 @@ namespace DSHttpServer.Demo
            <input type='submit' value ='Log In' /> 
         </form>";
 
-
         private const string FileName = "content.txt";
 
         private const string Username = "user";
@@ -41,14 +34,15 @@ namespace DSHttpServer.Demo
 
         public static async Task Main()
             => await new HttpServer(routes => routes
-                .MapGet<HomeController>("/", c => c.Index()))
-                //.MapGet<HomeController>("/Redirect", c => c.Redirect())
+                .MapGet<HomeController>("/", c => c.Index())
+                .MapGet<HomeController>("/Redirect", c => c.Redirect())
                 //.MapGet<HomeController>("/HTML", c => c.Html())
                 //.MapPost<HomeController>("/HTML", c => c.HtmlFormPost())
                 //.MapGet<HomeController>("/Content", c => c.Content())
                 //.MapPost<HomeController>("/Content", c => c.DownloadContent())
                 //.MapGet<HomeController>("/Cookies", c => c.Cookies())
-                //.MapGet<HomeController>("/Session", c => c.Session()))
+                //.MapGet<HomeController>("/Session", c => c.Session())
+                )
             .Start();
 
         private static void GetUserDataAction(Request request, Response response)
