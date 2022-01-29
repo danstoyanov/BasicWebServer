@@ -91,6 +91,23 @@ namespace DSHttpServer.Demo.Controllers
             return Html("<h1>Cookes set!</h1>", cookies);
         }
 
+        public Response Session()
+        {
+            string currentDateKey = "CurrentDate";
+            var sessionExists = this.Request.Session.ContainsKey(currentDateKey);
+
+            if (sessionExists)
+            {
+                var currentDate = this.Request.Session[currentDateKey];
+
+                return Text($"Stored date: {currentDate}!");
+            }
+            else
+            {
+                return Text("Current date stored!");
+            }
+        }
+
         private static async Task DownloadSitesAsTextFile(
             string fileName, string[] urls)
         {
