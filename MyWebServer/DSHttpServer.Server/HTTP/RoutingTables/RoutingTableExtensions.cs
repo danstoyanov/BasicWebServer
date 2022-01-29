@@ -1,10 +1,9 @@
 ﻿using System;
-
+using DSHttpServer.Server.Controllers;
 using DSHttpServer.Server.HTTP;
 using DSHttpServer.Server.HTTP.RoutingTables;
-using DSHttpServer.Server.RoutingTables;
 
-namespace DSHttpServer.Server.Controllers
+namespace DSHttpServer.Server.RoutingTables
 {
     public static class RoutingTableExtensions
     {
