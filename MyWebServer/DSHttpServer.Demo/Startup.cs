@@ -1,11 +1,4 @@
-﻿using System;
-using System.Text;
-using System.IO;
-using System.Linq;
-using System.Collections.Generic;
-using System.Web;
-using System.Net.Http;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 using DSHttpServer.Server;
 using DSHttpServer.Server.HTTP;
@@ -16,10 +9,6 @@ namespace DSHttpServer.Demo
 {
     public class Startup
     {
-        private const string Username = "user";
-
-        private const string Password = "user123";
-
         public static async Task Main()
             => await new HttpServer(routes => routes
                 .MapGet<HomeController>("/", c => c.Index())
@@ -31,6 +20,7 @@ namespace DSHttpServer.Demo
                 .MapGet<HomeController>("/Cookies", c => c.Cookies())
                 .MapGet<HomeController>("/Session", c => c.Session())
                 .MapGet<UsersController>("/Login", c => c.Login())
+                .MapPost<UsersController>("/Login", c => c.LogInUser())
             )
             .Start();
 
@@ -40,7 +30,7 @@ namespace DSHttpServer.Demo
             {
                 response.Body = "";
                 response.Body += $"<h3>Currently logged-in user " +
-                    $"is with username '{Username}'</h3>";
+                    "is with username '{Username}'</h3>";
             }
             else
             {
@@ -60,31 +50,6 @@ namespace DSHttpServer.Demo
 
             response.Body = "";
             response.Body += "<h3>Logged out successfully!</h3>";
-        }
-
-        private static void LoginAction(Request request, Response response)
-        {
-            request.Session.Clear();
-
-            var sessionBeforeLogin = request.Session;
-
-            var bodyText = "";
-
-            var usernameMatches = request.Form["Username"] == Startup.Username;
-            var passwordMaches = request.Form["Password"] == Startup.Password;
-
-            if (usernameMatches && passwordMaches)
-            {
-                request.Session[Session.SessionUserKey] = "MyUserId";
-                response.Cookies.Add(Session.SessionCookieName, request.Session.Id);
-
-                bodyText = "<h3>Logged successfuly!</h3>";
-
-                var sessionAfterLogin = request.Session;
-            }
-
-            response.Body = "";
-            response.Body += bodyText;
         }
     }
 }
