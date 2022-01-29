@@ -1,5 +1,7 @@
-﻿using DSHttpServer.Server.Controllers;
+﻿using System;
+
 using DSHttpServer.Server.HTTP;
+using DSHttpServer.Server.Controllers;
 
 namespace DSHttpServer.Demo.Controllers
 {
@@ -22,5 +24,18 @@ namespace DSHttpServer.Demo.Controllers
         public Response Redirect() => Redirect("https://github.com/");
 
         public Response Html() => Html(HomeController.HtmlForm);
+
+        public Response HtmlFormPost()
+        {
+            string formData = string.Empty;
+
+            foreach (var (key, value) in this.Request.Form)
+            {
+                formData += $"{key} - {value}";
+                formData += Environment.NewLine;
+            }
+
+            return Text(formData);
+        }
     }
 }
