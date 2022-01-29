@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
+using System.Text;
+using System.Web;
 using System.Net.Http;
 using System.Threading.Tasks;
 
 using DSHttpServer.Server.HTTP;
 using DSHttpServer.Server.Controllers;
+using DSHttpServer.Server.HTTP.Cookies;
 
 namespace DSHttpServer.Demo.Controllers
 {
@@ -28,7 +32,7 @@ namespace DSHttpServer.Demo.Controllers
 
         }
 
-        public Response Index() => Text("Hello from the server !");
+        public Response Index() => Text("Hello I am Dan and wellcome to my web server !");
 
         public Response Redirect() => Redirect("https://github.com/");
 
@@ -56,6 +60,35 @@ namespace DSHttpServer.Demo.Controllers
                 .Wait();
 
             return File(HomeController.FileName);
+        }
+
+        public Response Cookies()
+        {
+            if (this.Request.Cookies.Any(c => c.Name != DSHttpServer.Server.HTTP.Session.SessionCookieName))
+            {
+                var cookieText = new StringBuilder();
+
+                cookieText.AppendLine("<h1>Cookies</h1>");
+                cookieText.Append("<table border='1'><tr><th>Name</th><th>Value</th></tr>");
+
+                foreach (var cookie in this.Request.Cookies)
+                {
+                    cookieText.Append("<tr>");
+                    cookieText.Append($"<td>{HttpUtility.HtmlEncode(cookie.Name)}</td>");
+                    cookieText.Append($"<td>{HttpUtility.HtmlEncode(cookie.Value)}</td>");
+                    cookieText.Append("</tr>");
+                }
+                cookieText.Append("</table>");
+
+                return Html(cookieText.ToString());
+            }
+
+            var cookies = new CookieCollection();
+
+            cookies.Add("My-Cookie", "My-Value");
+            cookies.Add("My-Second-Cookie", "My-Second-Value");
+
+            return Html("<h1>Cookes set!</h1>", cookies);
         }
 
         private static async Task DownloadSitesAsTextFile(
@@ -89,7 +122,6 @@ namespace DSHttpServer.Demo.Controllers
                 return html.Substring(0, 2000);
             }
         }
-
-
     }
 }
+

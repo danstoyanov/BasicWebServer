@@ -1,6 +1,7 @@
 ﻿
 
 using DSHttpServer.Server.HTTP;
+using DSHttpServer.Server.HTTP.Cookies;
 using DSHttpServer.Server.Responses;
 
 namespace DSHttpServer.Server.Controllers
@@ -16,7 +17,20 @@ namespace DSHttpServer.Server.Controllers
 
         protected Response Text(string text) => new TextResponse(text);
 
-        protected Response Html(string text) => new HtmlResponse(text);
+        protected Response Html(string html, CookieCollection cookies = null)
+        {
+            var response = new HtmlResponse(html);
+
+            if (cookies != null)
+            {
+                foreach (var cookie in cookies)
+                {
+                    response.Cookies.Add(cookie.Name, cookie.Value);
+                }
+            }
+
+            return response;
+        }
 
         protected Response BadRequest() => new BadRequestResponse();
 

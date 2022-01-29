@@ -34,7 +34,7 @@ namespace DSHttpServer.Demo
                 .MapPost<HomeController>("/HTML", c => c.HtmlFormPost())
                 .MapGet<HomeController>("/Content", c => c.Content())
                 .MapPost<HomeController>("/Content", c => c.DownloadContent())
-                //.MapGet<HomeController>("/Cookies", c => c.Cookies())
+                .MapGet<HomeController>("/Cookies", c => c.Cookies())
                 //.MapGet<HomeController>("/Session", c => c.Session())
                 )
             .Start();
@@ -94,45 +94,6 @@ namespace DSHttpServer.Demo
 
             response.Body = "";
             response.Body += bodyText;
-        }
-
-        private static void AddCookiesAction(Request request, Response response)
-        {
-            var requestHasCookies = request.Cookies
-                .Any(c => c.Name != Session.SessionCookieName);
-
-            var bodyText = "";
-
-            if (requestHasCookies)
-            {
-                var cookieText = new StringBuilder();
-                cookieText.AppendLine("<h1>Cookies</h1>");
-
-                cookieText.Append("<table border='1'><tr><th>Name</th><th>Value</th></tr>");
-
-                foreach (var cookie in request.Cookies)
-                {
-                    cookieText.Append("<tr>");
-                    cookieText.Append($"<td>{HttpUtility.HtmlEncode(cookie.Name)}</td>");
-                    cookieText.Append($"<td>{HttpUtility.HtmlEncode(cookie.Value)}</td>");
-                    cookieText.Append("</tr>");
-                }
-                cookieText.Append("</table>");
-
-                bodyText = cookieText.ToString();
-            }
-            else
-            {
-                bodyText = "<h1>Cookes set!</h1>";
-            }
-
-            if (!requestHasCookies)
-            {
-                response.Cookies.Add("My-Cookie", "My-Value");
-                response.Cookies.Add("My-Second-Cookie", "My-Second-Value");
-            }
-
-            response.Body = bodyText;
         }
 
         private static void DisplaySessionInfoAction(Request request, Response response)
