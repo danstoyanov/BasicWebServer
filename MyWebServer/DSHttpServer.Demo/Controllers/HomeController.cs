@@ -7,6 +7,10 @@ namespace DSHttpServer.Demo.Controllers
 {
     public class HomeController : Controller
     {
+        private const string DownloadForm = @"<form action='/Content' method='POST'>
+                 <input type='submit' value ='Download Sites Content' /> 
+        </form>";
+
         private const string HtmlForm = @"<form action='/HTML' method='POST'>
             Name: <input type='text' name='Name'/>
             Age: <input type='number' name ='Age'/>
@@ -37,5 +41,7 @@ namespace DSHttpServer.Demo.Controllers
 
             return Text(formData);
         }
+
+        public Response Content() => Html(HomeController.DownloadForm);
     }
 }
