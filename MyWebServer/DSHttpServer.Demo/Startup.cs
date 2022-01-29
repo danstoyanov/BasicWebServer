@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 
 using DSHttpServer.Server;
-using DSHttpServer.Server.HTTP;
 using DSHttpServer.Demo.Controllers;
 using DSHttpServer.Server.RoutingTables;
 
@@ -21,24 +20,8 @@ namespace DSHttpServer.Demo
                 .MapGet<HomeController>("/Session", c => c.Session())
                 .MapGet<UsersController>("/Login", c => c.Login())
                 .MapPost<UsersController>("/Login", c => c.LogInUser())
-            .MapGet<UsersController>("/Logout", c => c.Logout())
-            )
+                .MapGet<UsersController>("/Logout", c => c.Logout())
+                .MapGet<UsersController>("/UserProfile", c => c.GetUserData()))
             .Start();
-
-        private static void GetUserDataAction(Request request, Response response)
-        {
-            if (request.Session.ContainsKey(Session.SessionCurrentDateKey))
-            {
-                response.Body = "";
-                response.Body += $"<h3>Currently logged-in user " +
-                    "is with username '{Username}'</h3>";
-            }
-            else
-            {
-                response.Body = "";
-                response.Body += "<h3>You should first log in " +
-                    "- <a href='/Login'>Login</a></h3>";
-            }
-        }
     }
 }

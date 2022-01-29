@@ -55,5 +55,16 @@ namespace DSHttpServer.Demo.Controllers
 
             return Html("<h3>Logged out successfully!</h3>");
         }
+
+        public Response GetUserData()
+        {
+            if (this.Request.Session.ContainsKey(Session.SessionCurrentDateKey))
+            {
+                return Html($"<h3>Currently logged-in user " +
+                    $"is with username <b>'{UsersController.Username}'</b></h3>");
+            }
+
+            return Redirect("/Login");
+        }
     }
 }
