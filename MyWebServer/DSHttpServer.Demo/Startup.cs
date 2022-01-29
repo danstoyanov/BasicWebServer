@@ -37,7 +37,7 @@ namespace DSHttpServer.Demo
                 .MapGet<HomeController>("/Cookies", c => c.Cookies())
                 .MapGet<HomeController>("/Session", c => c.Session()))
             .Start();
-
+        //✔ Step 4.2.1 Implement the Login() Method !
         private static void GetUserDataAction(Request request, Response response)
         {
             if (request.Session.ContainsKey(Session.SessionCurrentDateKey))
