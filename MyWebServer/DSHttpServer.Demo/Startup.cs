@@ -16,12 +16,6 @@ namespace DSHttpServer.Demo
 {
     public class Startup
     {
-        private const string LoginForm = @"<form action='/Login' method='POST'>
-           Username: <input type='text' name='Username'/>
-           Password: <input type='text' name='Password'/>
-           <input type='submit' value ='Log In' /> 
-        </form>";
-
         private const string Username = "user";
 
         private const string Password = "user123";
@@ -35,9 +29,11 @@ namespace DSHttpServer.Demo
                 .MapGet<HomeController>("/Content", c => c.Content())
                 .MapPost<HomeController>("/Content", c => c.DownloadContent())
                 .MapGet<HomeController>("/Cookies", c => c.Cookies())
-                .MapGet<HomeController>("/Session", c => c.Session()))
+                .MapGet<HomeController>("/Session", c => c.Session())
+                .MapGet<UsersController>("/Login", c => c.Login())
+            )
             .Start();
-        //✔ Step 4.2.1 Implement the Login() Method !
+
         private static void GetUserDataAction(Request request, Response response)
         {
             if (request.Session.ContainsKey(Session.SessionCurrentDateKey))
@@ -85,10 +81,6 @@ namespace DSHttpServer.Demo
                 bodyText = "<h3>Logged successfuly!</h3>";
 
                 var sessionAfterLogin = request.Session;
-            }
-            else
-            {
-                bodyText = Startup.LoginForm;
             }
 
             response.Body = "";
