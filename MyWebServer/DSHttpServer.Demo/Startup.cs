@@ -21,6 +21,7 @@ namespace DSHttpServer.Demo
                 .MapGet<HomeController>("/Session", c => c.Session())
                 .MapGet<UsersController>("/Login", c => c.Login())
                 .MapPost<UsersController>("/Login", c => c.LogInUser())
+            .MapGet<UsersController>("/Logout", c => c.Logout())
             )
             .Start();
 
@@ -38,18 +39,6 @@ namespace DSHttpServer.Demo
                 response.Body += "<h3>You should first log in " +
                     "- <a href='/Login'>Login</a></h3>";
             }
-        }
-
-        private static void LogoutAction(Request request, Response response)
-        {
-            var sessionBeforeClear = request.Session;
-
-            request.Session.Clear();
-
-            var sessionAfterClear = request.Session;
-
-            response.Body = "";
-            response.Body += "<h3>Logged out successfully!</h3>";
         }
     }
 }
