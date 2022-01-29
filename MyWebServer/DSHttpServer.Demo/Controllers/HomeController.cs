@@ -36,7 +36,7 @@ namespace DSHttpServer.Demo.Controllers
 
         public Response Redirect() => Redirect("https://github.com/");
 
-        public Response Html() => View();
+        public Response Html() => Html(HomeController.HtmlForm);
 
         public Response HtmlFormPost()
         {
