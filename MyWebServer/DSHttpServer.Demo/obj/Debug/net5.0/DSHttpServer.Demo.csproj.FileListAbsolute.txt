@@ -36,5 +36,7 @@ C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.
 C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\obj\Debug\net5.0\ref\DSHttpServer.Demo.dll
 C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\obj\Debug\net5.0\DSHttpServer.Demo.pdb
 C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\obj\Debug\net5.0\DSHttpServer.Demo.genruntimeconfig.cache
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\bin\Debug\net5.0\content.txt
 C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\bin\Debug\net5.0\Views\Home\Content.cshtml
 C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\bin\Debug\net5.0\Views\Home\Html.cshtml
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\bin\Debug\net5.0\Views\Users\Login.cshtml
