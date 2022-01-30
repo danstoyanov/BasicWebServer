@@ -40,3 +40,4 @@ C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.
 C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\bin\Debug\net5.0\Views\Home\Content.cshtml
 C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\bin\Debug\net5.0\Views\Home\Html.cshtml
 C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\bin\Debug\net5.0\Views\Users\Login.cshtml
+C:\Users\dakov\Source\Repos\danstoyanov\BasicWebServer\MyWebServer\DSHttpServer.Demo\bin\Debug\net5.0\Views\Home\HtmlFormPost.cshtml
