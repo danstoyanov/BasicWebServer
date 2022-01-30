@@ -9,7 +9,7 @@ namespace DSHttpServer.Server.Responses
         private const char PathSeparator = '/';
 
         public ViewResponse(string viewName, string controllerName, object model = null)
-            : base(string.Empty, ContentType.Html)
+            : base("", ContentType.Html)
         {
             if (!viewName.Contains(PathSeparator))
             {
@@ -26,7 +26,7 @@ namespace DSHttpServer.Server.Responses
 
             }
 
-            Body = viewContent;
+            this.Body = viewContent;
         }
 
         private string PopulateModel(string viewContent, object model)
@@ -34,18 +34,18 @@ namespace DSHttpServer.Server.Responses
             var data = model
                 .GetType()
                 .GetProperties()
-                .Select(p => new
+                .Select(pr => new
                 {
-                    p.Name,
-                    Value = p.GetValue(model)
+                    pr.Name,
+                    Value = pr.GetValue(model)
                 });
 
-            foreach (var item in data)
+            foreach (var entry in data)
             {
                 const string openingBrackets = "{{";
                 const string closingBrackets = "}}";
 
-                viewContent = viewContent.Replace($"{openingBrackets}{item.Name}{closingBrackets}", item.Value.ToString());
+                viewContent = viewContent.Replace($"{openingBrackets}{entry.Name}{closingBrackets}", entry.Value.ToString());
             }
 
             return viewContent;
