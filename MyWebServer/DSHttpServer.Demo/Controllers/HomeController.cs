@@ -6,6 +6,7 @@ using System.Web;
 using System.Net.Http;
 using System.Threading.Tasks;
 
+using DSHttpServer.Demo.Models;
 using DSHttpServer.Server.HTTP;
 using DSHttpServer.Server.Controllers;
 using DSHttpServer.Server.HTTP.Cookies;
@@ -34,15 +35,16 @@ namespace DSHttpServer.Demo.Controllers
 
         public Response HtmlFormPost()
         {
-            string formData = string.Empty;
+            var name = this.Request.Form["Name"];
+            var age = this.Request.Form["Age"];
 
-            foreach (var (key, value) in this.Request.Form)
+            var model = new FormViewModel()
             {
-                formData += $"{key} - {value}";
-                formData += Environment.NewLine;
-            }
+                Name = name,
+                Age = int.Parse(age)
+            };
 
-            return Text(formData);
+            return View(model);
         }
 
         public Response Content() => View();
